@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-mods-home',
@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mods-home.component.css']
 })
 export class ModsHomeComponent implements OnInit {
+  modalOpen = false;
 
-  constructor() { }
+
+  items = [
+    {title: 'Why is the sky blue?', content: 'THe sky is blue because it is'},
+    {title: 'What does an orange taste like?', content: 'An orange tastes like an orange'},
+    {title: 'What color is that cat', content: 'The cat is an orange color'},
+  ];
+
+
+  constructor() {
+
+
+  }
 
   ngOnInit() {
   }
 
+  onClick() {
+    this.modalOpen = !this.modalOpen;
+  }
 }
